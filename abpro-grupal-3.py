@@ -66,7 +66,7 @@ stock = {1: 100, 2: 100, 3: 100, 4: 100, 5: 100, 6: 100, 7: 100, 8: 100, 9: 100,
 
 #- Definir una forma de solicitar el stock disponible del producto por consola.
 
-def consulta_stock(codigo_stock)
+def consulta_stock(codigo_stock):
     print(f"El producto {codigo_stock} tiene un stock de {stock[codigo_stock]} unidades")
    
 
