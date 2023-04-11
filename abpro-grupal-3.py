@@ -14,7 +14,7 @@ def mostrar_stock(codigo):
 #- Definir una forma de solicitar unidades del producto por consola. Este número de productos se
 #almacenarán en una nueva variable llamada ‘Productos seleccionados’.
 productos_seleccionados_plantilla = [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0]]
-productos_seleccionados = copy.deepcopy[productos_seleccionados_plantilla]
+productos_seleccionados = copy.deepcopy(productos_seleccionados_plantilla)
 
 def pedir(codigo, cantidad):# corregir: agregar verificación de stock
     global productos_seleccionados #para usar el scope global de la variable
@@ -30,9 +30,10 @@ for item in productos_seleccionados:
     else:
         stock[item[0]-1][1] = (stock[item[0]-1][1]) - (productos_seleccionados[item[0]-1][1]) #si hay stock, descuenta
        
-#borrar carrito       
-productos_seleccionados = copy.deepcopy[productos_seleccionados_plantilla]    
-    
+#borrar carrito
+def borrar_carrito():       
+    global productos_seleccionados
+    productos_seleccionados = []
   
 
 
