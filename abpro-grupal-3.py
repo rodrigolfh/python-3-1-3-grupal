@@ -1,5 +1,4 @@
 #- importar copy para hacer deepcopy
-
 import copy
 
 #- Definir el stock de un producto en una variable.
@@ -34,20 +33,17 @@ def pedir(codigo, cantidad):
     else: #si no queda stock  
         print(f"No quedan suficientes unidades del Item {codigo}") 
     
-
-
-
-
-
-
-     
+  
     
 
 
 
 #borrar carrito       
 def borrar_carrito():
-    productos_seleccionados = copy.deepcopy(productos_seleccionados_plantilla)    
+    productos_seleccionados.clear()
+    print("Se ha limpiado el carrito")
+    
+
     
   
 
