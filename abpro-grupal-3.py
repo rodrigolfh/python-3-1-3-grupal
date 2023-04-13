@@ -23,27 +23,31 @@ def pedir(codigo, cantidad):
         print(f"No se pueden pedir más de 20 unidades. Usted pidió {cantidad}")
     elif (cantidad +1) <= stock[codigo] and cantidad >= 12: #si pide 12 o más, va uno de yapa
         productos_seleccionados[codigo] =  (cantidad + 1) #se agrega con yapa
-        print(f"Producto {codigo} : Se agregaron {cantidad} más 1 unidad2, de yapa al pedido, {cantidad + 1} en total.")
+        print(f"Producto {codigo} : Se agregaron {cantidad} más 1 unidad de yapa al pedido, {cantidad + 1} en total.")
+        #se descuenta stock para reservar
+        stock[codigo] -= cantidad+1
     elif cantidad <= stock[codigo]: #si son menos de 12
         productos_seleccionados[codigo] = cantidad 
+        #se descuenta stock para reservar
+        stock[codigo] -= cantidad
         print(f"Producto {codigo}: Se agregaron {cantidad} unidades al pedido")
     else: #si no queda stock  
         print(f"No quedan suficientes unidades del Item {codigo}") 
     
-    
 
 
 
 
 
-    #productos_seleccionados[(codigo-1)][1] = cantidad #corregir: lista de sólo los itemes seleccionados
+
      
     
 
-#- Los productos reubicados serán descontados del stock inicial.
+
 
 #borrar carrito       
-productos_seleccionados = copy.deepcopy(productos_seleccionados_plantilla)    
+def borrar_carrito():
+    productos_seleccionados = copy.deepcopy(productos_seleccionados_plantilla)    
     
   
 
