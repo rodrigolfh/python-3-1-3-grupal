@@ -51,15 +51,3 @@ def borrar_carrito():
 
 
 
-#- Al verificar las unidades disponibles, el programa entregará una unidad extra cuando se seleccionen
-#más de 12 unidades. Verificar que el stock posibilite entregar una unidad extra. Sino se entregan las
-#unidades justas. Cada una de las posibles acciones debe imprimir un mensaje explicando lo realizado.
-
-
-
-#- No se pueden solicitar más de 20 unidades en un mismo pedido.
-
-
-
-#- Si el valor ingresado es superior al stock disponible, este debe entregar un mensaje indicando que no
-#es posible realizar esta acción debido a que no hay stock suficiente.
