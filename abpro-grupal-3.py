@@ -20,7 +20,7 @@ def pedir(codigo, cantidad):# corregir: agregar verificación de stock
     global productos_seleccionados #para usar el scope global de la variable
     productos_seleccionados[(codigo-1)][1] = cantidad #corregir: lista de sólo los itemes seleccionados
      
-    
+   ### 
 
 #- Los productos reubicados serán descontados del stock inicial.
 
